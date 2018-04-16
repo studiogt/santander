@@ -1,7 +1,6 @@
 {
     "name": "studiogt/santander",
-    "version": "1.0.0",
-    "type": "project",
+    "type": "package",
     "authors": [
         {
             "name": "Fabio Dias",
