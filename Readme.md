@@ -36,7 +36,7 @@ $boleto = new \Boleto();
 
 $beneficiario = $boleto->getBeneficiario();
 $beneficiario->getDadosBancarios()
-                    ->setAgencia('4792')                        
+                ->setAgencia('4792')                        
                 ->getBanco()->setCodigo('033');
 $beneficiario->getEndereco()
                 ->setLogradouro("Almirante Barroso")
