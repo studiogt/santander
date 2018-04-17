@@ -1,6 +1,6 @@
-#Santander
+# Santander
 
-##Instalação
+## Instalação
 Adicione o repositório e a lista de dependencias
 
 ```json
@@ -23,9 +23,9 @@ então atualize o projeto via composer:
 $> composer install
 ```
 
-##Forma de usar
+## Forma de usar
 
-###Gerar um boleto em pdf
+### Gerar um boleto em pdf
 
 ```php
 <?php
