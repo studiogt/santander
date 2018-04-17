@@ -206,8 +206,8 @@
 					<div class="columns large-3-12">
 						Agência / Cod. Beneficiário <br />
 						<strong class="text-right">
-							<?php echo \Util::format('9(07)',$beneficiario->getDadosBancarios()->getAgencia());?>
-							<?php echo \Util::format('9(09)',$boleto->getCodigoBeneficiario());?>
+							<?php echo \Santander\Util::format('9(07)',$beneficiario->getDadosBancarios()->getAgencia());?>
+							<?php echo \Santander\Util::format('9(09)',$boleto->getCodigoBeneficiario());?>
 
 						</strong>
 					</div>
@@ -240,7 +240,7 @@
 					</div>
 					<div class="columns large-3-12">
 						Nosso Número<br />
-						<strong class="text-right"><?php echo \Util::format('9(013)',$boleto->getNossoNumero());?></strong>
+						<strong class="text-right"><?php echo \Santander\Util::format('9(013)',$boleto->getNossoNumero());?></strong>
 					</div>
 
 				</div>
@@ -377,8 +377,8 @@
 					<div class="columns large-3-12">
 						Agência / Cod. Beneficiário <br />
 						<strong class="text-right">
-							<?php echo \Util::format('9(07)',$beneficiario->getDadosBancarios()->getAgencia());?>
-							<?php echo \Util::format('9(09)',$boleto->getCodigoBeneficiario());?>
+							<?php echo \Santander\Util::format('9(07)',$beneficiario->getDadosBancarios()->getAgencia());?>
+							<?php echo \Santander\Util::format('9(09)',$boleto->getCodigoBeneficiario());?>
 
 						</strong>
 					</div>
@@ -410,7 +410,7 @@
 					</div>
 					<div class="columns large-3-12">
 						Nosso Número<br />
-						<strong class="text-right"><?php echo \Util::format('9(013)',$boleto->getNossoNumero());?></strong>
+						<strong class="text-right"><?php echo \Santander\Util::format('9(013)',$boleto->getNossoNumero());?></strong>
 					</div>
 				</div>
 				<div class="row">
