@@ -33,7 +33,7 @@ $> composer install
 
 require 'vendor/autoload.php';
     
-$boleto = new \Boleto();
+$boleto = new \Santander\Boleto();
 
 $beneficiario = $boleto->getBeneficiario();
 $beneficiario->getDadosBancarios()
