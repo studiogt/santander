@@ -1,6 +1,8 @@
 {
     "name": "studiogt/santander",
     "type": "package",
+    "license": "MIT",
+    "description": "Biblioteca para geração de remessa, boletos e processamento de retornos do banco Santander",
     "authors": [
         {
             "name": "Fabio Dias",
@@ -10,8 +12,8 @@
     "require": {},
     "autoload": {
     	"psr-4": {
-            "": "src/",
-    		"Tests": "tests/"
+            "Santander\\": "src/",
+    		"Tests\\": "tests/"
     	}    	
     },
     "require-dev": {
