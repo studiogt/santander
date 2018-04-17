@@ -1,8 +1,8 @@
 <?php
 
-namespace Pessoa;
+namespace Santander\Pessoa;
 
-use Banco;
+use Santander\Banco;
 
 class DadosBancarios {
 	private $banco;

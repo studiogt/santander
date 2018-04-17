@@ -1,8 +1,10 @@
 <?php
 
-use Retorno\Header;
-use Retorno\Movimento;
-use Retorno\Trailer;
+namespace Santander;
+
+use Santander\Retorno\Header;
+use Santander\Retorno\Movimento;
+use Santander\Retorno\Trailer;
 
 class Retorno {
 	private $header;

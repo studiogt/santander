@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Santander;
 
 class Endereco {
 	private $cep;

@@ -1,7 +1,7 @@
 <?php
 
-namespace Boleto;
-use Util;
+namespace Santander\Boleto;
+use Santander\Util;
 
 class LinhaDigitavel {
 	private $bar_code;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Remessa;
+namespace Santander\Remessa;
 
-use Util;
-use Pessoa;
+use Santander\Util;
+use Santander\Pessoa;
 
 class Movimento {
 

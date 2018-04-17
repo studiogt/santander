@@ -1,8 +1,8 @@
 <?php
 
-namespace Retorno;
+namespace Santander\Retorno;
 
-use Util;
+use Santander\Util;
 
 class Header {
 	private $fields = array(

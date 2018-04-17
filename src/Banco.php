@@ -1,5 +1,7 @@
 <?php
 
+namespace Santander;
+
 class Banco {
 
 	private $codigo;

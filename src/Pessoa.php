@@ -1,7 +1,9 @@
 <?php
 
-use Pessoa\Documento;
-use Pessoa\DadosBancarios;
+namespace Santander;
+
+use Santander\Pessoa\Documento;
+use Santander\Pessoa\DadosBancarios;
 
 
 class Pessoa {

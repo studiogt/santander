@@ -1,6 +1,6 @@
 <?php
 
-namespace Pessoa;
+namespace Santander\Pessoa;
 
 class Documento {
 	public const OUTRO = 0;

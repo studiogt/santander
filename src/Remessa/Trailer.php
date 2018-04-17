@@ -1,8 +1,8 @@
 <?php
 
-namespace Remessa;
+namespace Santander\Remessa;
 
-use Util;
+use Santander\Util;
 
 class Trailer {
 

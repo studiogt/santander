@@ -1,9 +1,9 @@
 <?php
 
-namespace Boleto;
-use Util;
-use Pessoa;
-use DateTime;
+namespace Santander\Boleto;
+use Santander\Util;
+use Santander\Pessoa;
+use Santander\DateTime;
 
 class BarCode {
 	private static $encoding = array(

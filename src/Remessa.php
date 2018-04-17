@@ -1,8 +1,10 @@
 <?php
 
-use Remessa\Header;
-use Remessa\Movimento;
-use Remessa\Trailer;
+namespace Santander;
+
+use Santander\Remessa\Header;
+use Santander\Remessa\Movimento;
+use Santander\Remessa\Trailer;
 
 
 
