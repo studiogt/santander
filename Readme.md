@@ -1,4 +1,5 @@
 # Santander
+Biblioteca para geração de boletos registrados, remessas e processamento de retornos do banco santander.
 
 ## Instalação
 Adicione o repositório e a lista de dependencias
