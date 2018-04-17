@@ -6,7 +6,7 @@ Adicione o repositório e a lista de dependencias
 ```json
 {
 
-	"repositories": [
+"repositories": [
     	{
 			"url": "https://github.com/studiogt/santander",
 			"type": "vcs"
