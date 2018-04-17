@@ -72,3 +72,9 @@ header("Content-type: application/pdf");
 echo $boleto->renderPDF();
 
 ```
+
+### Gerar um arquivo de remessa
+To-do
+
+### Processar um arquivo de retorno
+To-do
