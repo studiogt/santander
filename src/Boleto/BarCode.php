@@ -3,7 +3,7 @@
 namespace Santander\Boleto;
 use Santander\Util;
 use Santander\Pessoa;
-use Santander\DateTime;
+use DateTime;
 
 class BarCode {
 	private static $encoding = array(
