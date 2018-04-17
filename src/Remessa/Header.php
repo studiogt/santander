@@ -46,7 +46,7 @@ class Header {
 	//010-011: 9(002)
 	private $codigo_servico;
 	public function setCodigoServico($codigo_servico = 1) {
-		$this->codigo_servico = \Util::format('9(002)', $codigo_servico);
+		$this->codigo_servico = Util::format('9(002)', $codigo_servico);
 	}
 	public function getCodigoServico() {
 		return $this->codigo_servico;
@@ -55,7 +55,7 @@ class Header {
 	//012-026: X(015)
 	private $literal_servico;
 	public function setLiteralServico($literal_servico = 'COBRANÇA') {
-		$this->literal_servico = \Util::format('X(015)', $literal_servico);
+		$this->literal_servico = Util::format('X(015)', $literal_servico);
 	}
 	public function getLiteralServico() {
 		return $this->literal_servico;
@@ -64,7 +64,7 @@ class Header {
 	//027-046: 9(020)
 	private $codigo_transmissao;
 	public function setCodigoTransmissao($codigo_transmissao = "") {
-		$this->codigo_transmissao = \Util::format('9(020)',$codigo_transmissao);
+		$this->codigo_transmissao = Util::format('9(020)',$codigo_transmissao);
 		return $this;
 	}
 	public function getCodigoTransmissao() {
@@ -123,7 +123,7 @@ class Header {
 	//305-351: X(047)
 	private $mensagens = array();
 	public function addMensagem($mensagem = '') {
-		$this->mensagens[] = \Util::format("X(047)", $mensagem);
+		$this->mensagens[] = Util::format("X(047)", $mensagem);
 		return $this;
 	}
 	public function getMensagens() {
@@ -131,7 +131,7 @@ class Header {
 	}
 	public function setMensagem($mensagem = '', $numero = 1) {
 		$index = (int)$numero - 1;
-		$this->mensagem[$index] = \Util::format('X(047)',$mensagem);
+		$this->mensagem[$index] = Util::format('X(047)',$mensagem);
 		return $this;
 	}
 	public function getMensagem($numero = 1) {
@@ -146,7 +146,7 @@ class Header {
 	//392-394: 9(003)
 	private $versao_remessa;
 	public function setVersaoRemessa($versao_remessa = 217) {
-		$this->versao_remessa = \Util::format('9(003)', $versao_remessa);
+		$this->versao_remessa = Util::format('9(003)', $versao_remessa);
 	}
 	public function getVersaoRemessa() {
 		return $this->versao_remessa;
@@ -155,7 +155,7 @@ class Header {
 	//395-400: 9(006)
 	private $sequencial;
 	public function setSequencial($sequencial = 1) {
-		$this->sequencial = \Util::format('9(006)',$sequencial);
+		$this->sequencial = Util::format('9(006)',$sequencial);
 	}
 	public function getSequencial() {
 		return $this->sequencial;
@@ -205,7 +205,7 @@ class Header {
 			$str = "{$codigo_registro}{$codigo_remessa}{$literal_transmissao}{$codigo_servico}{$literal_servico}{$codigo_transmissao}{$nome_beneficiario}{$codigo_banco}{$nome_banco}{$data_gravacao}";
 
 			//zeros
-			$str .= \Util::str_pad("", 16, '0');
+			$str .= Util::str_pad("", 16, '0');
 
 			//mensagens
 			$mensagens = $this->getMensagens();
@@ -218,7 +218,7 @@ class Header {
 			}
 
 			//brancos
-			$str .= \Util::str_pad(" ", 40, ' ');
+			$str .= Util::str_pad(" ", 40, ' ');
 
 			$str .= "{$versao_remessa}{$sequencial}";
 

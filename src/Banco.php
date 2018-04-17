@@ -2,6 +2,8 @@
 
 namespace Santander;
 
+use Santander\Util;
+
 class Banco {
 
 	private $codigo;
@@ -21,7 +23,7 @@ class Banco {
 	}
 
 	public function getDV() {
-		return \Util::modulo11(\Util::format('9(03)',$this->getCodigo()));
+		return Util::modulo11(Util::format('9(03)',$this->getCodigo()));
 	}
 
 	public function setNome($nome = '') {
