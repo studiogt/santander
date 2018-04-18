@@ -512,7 +512,7 @@ class Movimento {
 	//384-385: 9(002)
 	private $complemento;
 	public function setComplemento($complemento) {
-		$this->complemento = Util::format('9(002)',$complemento);
+		$this->complemento = Util::format('X(002)',$complemento);
 
 	}
 	public function getComplemento() {
