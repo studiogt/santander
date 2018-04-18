@@ -3,9 +3,9 @@
 namespace Santander\Pessoa;
 
 class Documento {
-	public const OUTRO = 0;
-	public const CPF = 1;
-	public const CNPJ = 2;
+	const OUTRO = 0;
+	const CPF = 1;
+	const CNPJ = 2;
 
 	private $tipo;
 	private $numero;
