@@ -38,10 +38,7 @@ class Retorno {
 		$lines = explode("\n", $lines);
 
 		foreach($lines as $line) {
-			if (400 != mb_strlen($line, 'UTF-8')) {
-				echo "Lenght: ".mb_strlen($line, 'UTF-8');
-				var_dump($line);
-				exit;
+			if (400 != mb_strlen($line, 'UTF-8')) {				
 				continue;
 			}
 			$this->parseLine($line);

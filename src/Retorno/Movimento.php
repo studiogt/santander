@@ -5,6 +5,39 @@ namespace Santander\Retorno;
 use Santander\Util;
 
 class Movimento {
+
+	public static function getDescricaoOcorrencia($codigo_ocorrencia) {
+		$ocorrencias = array(
+			1 => 'TÍTULO NÃO EXISTE',
+			2 => 'ENTRADA TÍT. CONFIRMADA',
+			3 => 'ENTRADA TÍT. REJEITADA',
+			6 => 'LIQUIDAÇÃO',
+			7 => 'LIQUIDAÇÃO POR CONTA',
+			8 => 'LIQUIDAÇÃO POR SALDO',
+			9 => 'BAIXA AUTOMÁTICA',
+			10 => 'TÍT. BAIX. CONF. INSTRUÇÃO',
+			11 => 'EM SER',
+			12 => 'ABATIMENTO CONCEDIDO',
+			13 => 'ABATIMENTO CANCELADO',
+			14 => 'ALTERAÇÃO DE VENCIMENTO',
+			15 => 'CONFIRMAÇÃO DE PROTESTO',
+			16 => 'TÍT. JÁ BAIXADO/LIQUIDADO',
+			17 => 'LIQUIDADO EM CARTÓRIO',
+			21 => 'TÍT. ENVIADO A CARTÓRIO',
+			22 => 'TÍT. RETIRADO DE CARTÓRIO',
+			24 => 'CUSTAS DE CARTÓRIO',
+			25 => 'PROTESTAR TÍTULO',
+			26 => 'SUSTAR PROTESTO',
+			35 => 'TÍTULO DDA RECONHECIDO PELO PAGADOR',
+			36 => 'TÍTULO DDA NÃO RECONHECIDO PELO PAGADOR',
+			37 => 'TÍTULO DDA RECUSADO PELA CIP',
+			38 => 'RECEBIMENTO DA INSTRUÇÃO NÃO PROTESTAR',
+			39 => 'ESPÉCIE DE TÍTULO NÃO PERMITE A INSTRUÇÃO'
+		);
+
+		return $ocorrencias[(int)$codigo_ocorrencia];
+	}
+
 	private $fields = array(
 		'codigo_registro' => '9(001)',
 		'tipo_inscricao_beneficiario' => '9(002)',
