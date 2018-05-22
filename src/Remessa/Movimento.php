@@ -99,21 +99,21 @@ class Movimento {
 	//022-029: 9(008)
 	private $conta_movimento_beneficiario;
 	public function setContaMovimentoBeneficiario($conta_movimento_beneficiario) {
-		$this->getBeneficiario()->getDadosBancarios()->setConta($conta_movimento_beneficiario);
+		$this->getBeneficiario()->getDadosBancarios()->setContaMovimento($conta_movimento_beneficiario);
 		return $this;
 	}
 	public function getContaMovimentoBeneficiario() {
-		return Util::format('9(008)', $this->getBeneficiario()->getDadosBancarios()->getConta());		
+		return Util::format('9(008)', $this->getBeneficiario()->getDadosBancarios()->getContaMovimento());		
 	}
 
 	//030-037: 9(008)
 	private $conta_cobranca_beneficiario;
 	public function setContaCobrancaBeneficiario($conta_cobranca_beneficiario) {
-		$this->getBeneficiario()->getDadosBancarios()->setConta($conta_cobranca_beneficiario);
+		$this->getBeneficiario()->getDadosBancarios()->setContaCobranca($conta_cobranca_beneficiario);
 		return $this;
 	}
 	public function getContaCobrancaBeneficiario() {
-		return Util::format('9(008)', $this->getBeneficiario()->getDadosBancarios()->getConta());
+		return Util::format('9(008)', $this->getBeneficiario()->getDadosBancarios()->getContaCobranca());
 	}
 
 	//038-062: X(025)
@@ -544,6 +544,9 @@ class Movimento {
 	}
 
 	public function __toString() {
+
+		error_log("cpf/cnpj: ".$this->getCnpjCpfBeneficiario().' - '.$this->getTipoInscricaoBeneficiario());
+
 		$dados = array();
 		$dados[] = $this->getCodigoRegistro();
 		$dados[] = $this->getTipoInscricaoBeneficiario();

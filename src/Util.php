@@ -23,7 +23,7 @@ class Util {
 			$pad_length = $inteiro + $decimal;
 		} else if (preg_match('/^9\((?P<tamanho>\d+)\)$/', $formato, $matches)) {			
 			$pad_length = (int)$matches['tamanho'];
-			$valor = (int)preg_replace('/\D/','',$valor);
+			$valor = preg_replace('/\D/','',$valor);
 		} else {
 			throw new \Exception("Formato {$formato} inválido.");
 		}

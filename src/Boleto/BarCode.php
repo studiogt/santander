@@ -189,6 +189,15 @@ class BarCode {
 		return Util::modulo11($str, true);
 	}
 
+	public function getCampoLivre() {
+		$data[] = Util::format('9(01)', 9);
+		$data[] = Util::format('9(07)', $this->getCodigoBeneficiario());
+		$data[] = Util::format('9(13)', $this->getNossoNumero());
+		$data[] = Util::format('9(01)', 0.00);
+		$data[] = Util::format('9(03)', $this->getTipoModalidadeCarteira());
+		return join('', $data);
+	}
+
 	public function getString($dv = false) {
 		$data = array();
 		$data[] = Util::format('9(03)', $this->getIdentificacaoBanco());
@@ -198,12 +207,8 @@ class BarCode {
 		}
 		$data[] = Util::format('9(04)', $this->getFatorVencimento());
 		$data[] = Util::format('9(08)v9(2)', $this->getValorNominal());
-		$data[] = Util::format('9(01)', 9);
-		$data[] = Util::format('9(07)', $this->getCodigoBeneficiario());
-		$data[] = Util::format('9(13)', $this->getNossoNumero());
-		$data[] = Util::format('9(01)', 0.00);
-		$data[] = Util::format('9(03)', $this->getTipoModalidadeCarteira());
 
+		$data[] = $this->getCampoLivre();
 		return join('', $data);
 	}
 	public function __toString() {

@@ -64,7 +64,10 @@ class Header {
 	//027-046: 9(020)
 	private $codigo_transmissao;
 	public function setCodigoTransmissao($codigo_transmissao = "") {
+		$ct = Util::format('9(020)', $codigo_transmissao);
+
 		$this->codigo_transmissao = Util::format('9(020)',$codigo_transmissao);
+		error_log("setCodigoTransmissao({$codigo_transmissao}) = {$this->codigo_transmissao}:{$ct}");
 		return $this;
 	}
 	public function getCodigoTransmissao() {
@@ -201,6 +204,8 @@ class Header {
 			$mensagem = $this->getMensagens();
 			$versao_remessa = $this->getVersaoRemessa();
 			$sequencial = $this->getSequencial();
+
+			
 
 			$str = "{$codigo_registro}{$codigo_remessa}{$literal_transmissao}{$codigo_servico}{$literal_servico}{$codigo_transmissao}{$nome_beneficiario}{$codigo_banco}{$nome_banco}{$data_gravacao}";
 

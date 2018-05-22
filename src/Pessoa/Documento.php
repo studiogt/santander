@@ -15,7 +15,7 @@ class Documento {
 	}
 
 	public function setTipo($tipo = 0) {
-		$this->tipo == (int)$tipo;
+		$this->tipo = (int)$tipo;
 		return $this;
 	}
 	public function getTipo() {
@@ -26,7 +26,8 @@ class Documento {
 		$numero = preg_replace('/[^\d\.\-]/','', $numero);
 		$this->numero = $numero;
 
-		$len = strlen($numero);
+		$len = strlen(preg_replace('/\D/','',$numero));
+
 		switch ($len) {
 			case 11:
 				$this->setTipo(Documento::CPF);

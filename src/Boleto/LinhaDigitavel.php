@@ -56,13 +56,18 @@ class LinhaDigitavel {
 
 	public function getTerceiroGrupo() {
 		$data = array();
-		$data[] = Util::format('9(06)', substr($this->getNossoNumero(), 7));
-		$data[] = Util::format('9(01)', 0);
-		$data[] = Util::format('9(03)', $this->getBarCode()->getTipoModalidadeCarteira());
+		//$data[] = Util::format('9(06)', substr($this->getNossoNumero(), 6, 6));
+
+		
+		$data[] = substr($this->getBarCode()->getCampoLivre(),15,10);
+
+		//$data[] = Util::format('9(01)', 0);
+		//$data[] = Util::format('9(03)', $this->getBarCode()->getTipoModalidadeCarteira());
 		
 		$str = join('', $data);
 		
-		return $str.= '.' . Util::format('9(01)', $this->getDV($str));
+		//return $str.= '.' . Util::format('9(01)', $this->getDV($str));
+		return $str.= '.' . Util::format('9(01)', Util::modulo10($str));
 	}
 
 	public function getQuartoGrupo() {
